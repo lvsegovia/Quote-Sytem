@@ -75,21 +75,21 @@ def test_Transport():
     assert "land or sea" == test_transport.transp()
     assert "air land or sea" == test_transport2.transp()
     ###### Valid only on the date they were tested (2021/6/6) ######
-    #test_delivery_date3 = date(2021,6,8)
-    #test_transport3 = quote_system.Transport(test_delivery_date3,"no",3.5,1.5)
-    #assert "2021-06-08" == str(test_transport3.delivery_date)
-    #assert date(2021,6,8) == test_transport3.delivery_date
-    #assert 2 == test_transport3.delta_days
-    #assert 35 == test_transport3.cost_air
-    #assert "no" == test_transport3.hazard
-    #assert 3.5 == test_transport3.weight
-    #assert 1.5 == test_transport3.volume
-    #assert "air" == test_transport3.transp()
-    #test_delivery_date4 = date(2021,5,6)
-    #test_transport4 = quote_system.Transport(test_delivery_date4,"no",3.5,1.5)
-    #assert -31 == test_transport4.delta_days
-    #assert "n/a" == test_transport4.transp()
-    #### End of tests that are valid only for (2021/6/6) ####
+    test_delivery_date3 = date(2021,6,8)
+    test_transport3 = quote_system.Transport(test_delivery_date3,"no",3.5,1.5)
+    assert "2021-06-08" == str(test_transport3.delivery_date)
+    assert date(2021,6,8) == test_transport3.delivery_date
+    assert 2 == test_transport3.delta_days
+    assert 35 == test_transport3.cost_air
+    assert "no" == test_transport3.hazard
+    assert 3.5 == test_transport3.weight
+    assert 1.5 == test_transport3.volume
+    assert "air" == test_transport3.transp()
+    test_delivery_date4 = date(2021,5,6)
+    test_transport4 = quote_system.Transport(test_delivery_date4,"no",3.5,1.5)
+    assert -31 == test_transport4.delta_days
+    assert "n/a" == test_transport4.transp()
+    ### End of tests that are valid only for (2021/6/6) ####
 
 
 def test_Cost():
