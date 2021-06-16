@@ -292,7 +292,7 @@ def unwanted_chars_fun(text):
 def salir():
     sys.exit()
 
-# TO DO AUTOMATED TESTS #
+
 def main():
     main_d = {
         "1": capture_data,
